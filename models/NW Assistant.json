@@ -1,0 +1,1630 @@
+{
+  "luis_schema_version": "1.3.0",
+  "name": "NW Assistant",
+  "desc": "NW Assistant",
+  "culture": "en-us",
+  "intents": [
+    {
+      "name": "ListAttendees"
+    },
+    {
+      "name": "RemoveAttendee"
+    },
+    {
+      "name": "AddAttendee"
+    },
+    {
+      "name": "CloseMeeting"
+    },
+    {
+      "name": "AddActionItem"
+    },
+    {
+      "name": "SummarizeMeeting"
+    },
+    {
+      "name": "AddMinute"
+    },
+    {
+      "name": "StartMeeting"
+    },
+    {
+      "name": "RemoveActionItem"
+    },
+    {
+      "name": "Help"
+    },
+    {
+      "name": "None"
+    },
+    {
+      "name": "ListMinutes"
+    },
+    {
+      "name": "ListActionItems"
+    },
+    {
+      "name": "test"
+    },
+    {
+      "name": "RemoveMinute"
+    }
+  ],
+  "entities": [
+    {
+      "name": "Location"
+    },
+    {
+      "name": "MinuteTitle"
+    },
+    {
+      "name": "ActionItemTitle"
+    },
+    {
+      "name": "MeetingTitle"
+    },
+    {
+      "name": "Attendee"
+    },
+    {
+      "name": "HelpItem"
+    }
+  ],
+  "composites": [],
+  "bing_entities": [],
+  "actions": [],
+  "model_features": [
+    {
+      "name": "start",
+      "mode": true,
+      "words": "start,begin,initiate,kickoff",
+      "activated": true
+    },
+    {
+      "name": "action item",
+      "mode": true,
+      "words": "action item,actionitem,ai,action,action items",
+      "activated": true
+    },
+    {
+      "name": "meeting minute",
+      "mode": true,
+      "words": "meeting minute,mm,minute,minutes,meeting minutes",
+      "activated": true
+    },
+    {
+      "name": "close",
+      "mode": true,
+      "words": "close,end,finalize,complete",
+      "activated": true
+    },
+    {
+      "name": "summarize",
+      "mode": true,
+      "words": "summarize",
+      "activated": true
+    },
+    {
+      "name": "attendee",
+      "mode": true,
+      "words": "attendee,attendees,person,rollcall,roll,shortname,name,id",
+      "activated": true
+    }
+  ],
+  "regex_features": [],
+  "utterances": [
+    {
+      "text": "start meeting",
+      "intent": "StartMeeting",
+      "entities": []
+    },
+    {
+      "text": "add actionitem 1",
+      "intent": "AddActionItem",
+      "entities": [
+        {
+          "entity": "ActionItemTitle",
+          "startPos": 2,
+          "endPos": 2
+        }
+      ]
+    },
+    {
+      "text": "add action item 1",
+      "intent": "AddActionItem",
+      "entities": [
+        {
+          "entity": "ActionItemTitle",
+          "startPos": 3,
+          "endPos": 3
+        }
+      ]
+    },
+    {
+      "text": "add attendee tony",
+      "intent": "AddAttendee",
+      "entities": [
+        {
+          "entity": "Attendee",
+          "startPos": 2,
+          "endPos": 2
+        }
+      ]
+    },
+    {
+      "text": "add attendee coty collins",
+      "intent": "AddAttendee",
+      "entities": [
+        {
+          "entity": "Attendee",
+          "startPos": 2,
+          "endPos": 3
+        }
+      ]
+    },
+    {
+      "text": "add attendee tony dials",
+      "intent": "AddAttendee",
+      "entities": [
+        {
+          "entity": "Attendee",
+          "startPos": 2,
+          "endPos": 3
+        }
+      ]
+    },
+    {
+      "text": "add action item this is a test",
+      "intent": "AddActionItem",
+      "entities": [
+        {
+          "entity": "ActionItemTitle",
+          "startPos": 3,
+          "endPos": 6
+        }
+      ]
+    },
+    {
+      "text": "start meeting 1234",
+      "intent": "StartMeeting",
+      "entities": [
+        {
+          "entity": "MeetingTitle",
+          "startPos": 2,
+          "endPos": 2
+        }
+      ]
+    },
+    {
+      "text": "start meeting my first meeting",
+      "intent": "StartMeeting",
+      "entities": []
+    },
+    {
+      "text": "add meeting minute 1",
+      "intent": "AddMinute",
+      "entities": [
+        {
+          "entity": "MinuteTitle",
+          "startPos": 3,
+          "endPos": 3
+        }
+      ]
+    },
+    {
+      "text": "add minute 1",
+      "intent": "AddMinute",
+      "entities": [
+        {
+          "entity": "MinuteTitle",
+          "startPos": 2,
+          "endPos": 2
+        }
+      ]
+    },
+    {
+      "text": "close meeting",
+      "intent": "CloseMeeting",
+      "entities": []
+    },
+    {
+      "text": "read minutes",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "add minute minute 1",
+      "intent": "AddMinute",
+      "entities": [
+        {
+          "entity": "MinuteTitle",
+          "startPos": 2,
+          "endPos": 3
+        }
+      ]
+    },
+    {
+      "text": "start",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "terminate meeting",
+      "intent": "CloseMeeting",
+      "entities": []
+    },
+    {
+      "text": "leave meeting",
+      "intent": "CloseMeeting",
+      "entities": []
+    },
+    {
+      "text": "end meeting",
+      "intent": "CloseMeeting",
+      "entities": []
+    },
+    {
+      "text": "add action item hehe",
+      "intent": "AddActionItem",
+      "entities": [
+        {
+          "entity": "ActionItemTitle",
+          "startPos": 3,
+          "endPos": 3
+        }
+      ]
+    },
+    {
+      "text": "add",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "add minute",
+      "intent": "AddMinute",
+      "entities": []
+    },
+    {
+      "text": "add attendee",
+      "intent": "AddAttendee",
+      "entities": []
+    },
+    {
+      "text": "list attendees",
+      "intent": "ListAttendees",
+      "entities": []
+    },
+    {
+      "text": "lsit attendees",
+      "intent": "ListAttendees",
+      "entities": []
+    },
+    {
+      "text": "list attendee",
+      "intent": "ListAttendees",
+      "entities": []
+    },
+    {
+      "text": "toyn",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "list",
+      "intent": "ListAttendees",
+      "entities": []
+    },
+    {
+      "text": "add attendee tony dials 123",
+      "intent": "AddAttendee",
+      "entities": [
+        {
+          "entity": "Attendee",
+          "startPos": 2,
+          "endPos": 3
+        },
+        {
+          "entity": "Attendee",
+          "startPos": 4,
+          "endPos": 4
+        }
+      ]
+    },
+    {
+      "text": "attendee",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "add attendee dialsa",
+      "intent": "AddAttendee",
+      "entities": [
+        {
+          "entity": "Attendee",
+          "startPos": 2,
+          "endPos": 2
+        }
+      ]
+    },
+    {
+      "text": "add attendee woowoo",
+      "intent": "AddAttendee",
+      "entities": [
+        {
+          "entity": "Attendee",
+          "startPos": 2,
+          "endPos": 2
+        }
+      ]
+    },
+    {
+      "text": "help",
+      "intent": "Help",
+      "entities": []
+    },
+    {
+      "text": "help rollcall",
+      "intent": "Help",
+      "entities": [
+        {
+          "entity": "HelpItem",
+          "startPos": 1,
+          "endPos": 1
+        }
+      ]
+    },
+    {
+      "text": "help attendance",
+      "intent": "Help",
+      "entities": [
+        {
+          "entity": "HelpItem",
+          "startPos": 1,
+          "endPos": 1
+        }
+      ]
+    },
+    {
+      "text": "help attendee",
+      "intent": "Help",
+      "entities": [
+        {
+          "entity": "HelpItem",
+          "startPos": 1,
+          "endPos": 1
+        }
+      ]
+    },
+    {
+      "text": "help minutes",
+      "intent": "Help",
+      "entities": [
+        {
+          "entity": "HelpItem",
+          "startPos": 1,
+          "endPos": 1
+        }
+      ]
+    },
+    {
+      "text": "help meeting",
+      "intent": "Help",
+      "entities": [
+        {
+          "entity": "HelpItem",
+          "startPos": 1,
+          "endPos": 1
+        }
+      ]
+    },
+    {
+      "text": "help action item",
+      "intent": "Help",
+      "entities": [
+        {
+          "entity": "HelpItem",
+          "startPos": 1,
+          "endPos": 2
+        }
+      ]
+    },
+    {
+      "text": "'add attendee tony",
+      "intent": "AddAttendee",
+      "entities": [
+        {
+          "entity": "Attendee",
+          "startPos": 3,
+          "endPos": 3
+        }
+      ]
+    },
+    {
+      "text": "remove attendee tony",
+      "intent": "RemoveAttendee",
+      "entities": [
+        {
+          "entity": "Attendee",
+          "startPos": 2,
+          "endPos": 2
+        }
+      ]
+    },
+    {
+      "text": "remove attendee tony dials",
+      "intent": "RemoveAttendee",
+      "entities": [
+        {
+          "entity": "Attendee",
+          "startPos": 2,
+          "endPos": 3
+        }
+      ]
+    },
+    {
+      "text": "delete attendee tony",
+      "intent": "RemoveAttendee",
+      "entities": [
+        {
+          "entity": "Attendee",
+          "startPos": 2,
+          "endPos": 2
+        }
+      ]
+    },
+    {
+      "text": "delete attendee tony dials",
+      "intent": "RemoveAttendee",
+      "entities": [
+        {
+          "entity": "Attendee",
+          "startPos": 2,
+          "endPos": 3
+        }
+      ]
+    },
+    {
+      "text": "please remove tony dials from attendee list",
+      "intent": "RemoveAttendee",
+      "entities": [
+        {
+          "entity": "Attendee",
+          "startPos": 2,
+          "endPos": 3
+        }
+      ]
+    },
+    {
+      "text": "add actionitem tony to send email",
+      "intent": "AddActionItem",
+      "entities": [
+        {
+          "entity": "ActionItemTitle",
+          "startPos": 2,
+          "endPos": 5
+        }
+      ]
+    },
+    {
+      "text": "remove attendee 3",
+      "intent": "RemoveAttendee",
+      "entities": [
+        {
+          "entity": "Attendee",
+          "startPos": 2,
+          "endPos": 2
+        }
+      ]
+    },
+    {
+      "text": "add attendee anthony dials",
+      "intent": "AddAttendee",
+      "entities": [
+        {
+          "entity": "Attendee",
+          "startPos": 2,
+          "endPos": 3
+        }
+      ]
+    },
+    {
+      "text": "remove attendee dialsa",
+      "intent": "RemoveAttendee",
+      "entities": [
+        {
+          "entity": "Attendee",
+          "startPos": 2,
+          "endPos": 2
+        }
+      ]
+    },
+    {
+      "text": "remove attendee",
+      "intent": "RemoveAttendee",
+      "entities": []
+    },
+    {
+      "text": "exit",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "add attendee tony4",
+      "intent": "AddAttendee",
+      "entities": [
+        {
+          "entity": "Attendee",
+          "startPos": 2,
+          "endPos": 2
+        }
+      ]
+    },
+    {
+      "text": "summarize meeting",
+      "intent": "SummarizeMeeting",
+      "entities": []
+    },
+    {
+      "text": "show meeting summary",
+      "intent": "SummarizeMeeting",
+      "entities": []
+    },
+    {
+      "text": "meeting summary",
+      "intent": "SummarizeMeeting",
+      "entities": []
+    },
+    {
+      "text": "get list",
+      "intent": "ListAttendees",
+      "entities": []
+    },
+    {
+      "text": "add attendee craig",
+      "intent": "AddAttendee",
+      "entities": [
+        {
+          "entity": "Attendee",
+          "startPos": 2,
+          "endPos": 2
+        }
+      ]
+    },
+    {
+      "text": "remove attendee 2",
+      "intent": "RemoveAttendee",
+      "entities": [
+        {
+          "entity": "Attendee",
+          "startPos": 2,
+          "endPos": 2
+        }
+      ]
+    },
+    {
+      "text": "add attendee miles",
+      "intent": "AddAttendee",
+      "entities": [
+        {
+          "entity": "Attendee",
+          "startPos": 2,
+          "endPos": 2
+        }
+      ]
+    },
+    {
+      "text": "show the attendees",
+      "intent": "ListAttendees",
+      "entities": []
+    },
+    {
+      "text": "attendee list",
+      "intent": "ListAttendees",
+      "entities": []
+    },
+    {
+      "text": "list action items",
+      "intent": "ListActionItems",
+      "entities": []
+    },
+    {
+      "text": "remove action item tony is cool",
+      "intent": "RemoveActionItem",
+      "entities": [
+        {
+          "entity": "ActionItemTitle",
+          "startPos": 3,
+          "endPos": 5
+        }
+      ]
+    },
+    {
+      "text": "remove action item 2",
+      "intent": "RemoveActionItem",
+      "entities": [
+        {
+          "entity": "ActionItemTitle",
+          "startPos": 3,
+          "endPos": 3
+        }
+      ]
+    },
+    {
+      "text": "ls",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "add attendee tony 11",
+      "intent": "AddAttendee",
+      "entities": [
+        {
+          "entity": "Attendee",
+          "startPos": 2,
+          "endPos": 3
+        }
+      ]
+    },
+    {
+      "text": "remove 9",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "add action item this is a test of the action items system",
+      "intent": "AddActionItem",
+      "entities": [
+        {
+          "entity": "ActionItemTitle",
+          "startPos": 3,
+          "endPos": 11
+        }
+      ]
+    },
+    {
+      "text": "add action item ai3 test",
+      "intent": "AddActionItem",
+      "entities": [
+        {
+          "entity": "ActionItemTitle",
+          "startPos": 3,
+          "endPos": 4
+        }
+      ]
+    },
+    {
+      "text": "add action item ai1",
+      "intent": "AddActionItem",
+      "entities": [
+        {
+          "entity": "ActionItemTitle",
+          "startPos": 3,
+          "endPos": 3
+        }
+      ]
+    },
+    {
+      "text": "add action item ai2",
+      "intent": "AddActionItem",
+      "entities": [
+        {
+          "entity": "ActionItemTitle",
+          "startPos": 3,
+          "endPos": 3
+        }
+      ]
+    },
+    {
+      "text": "remove action item",
+      "intent": "RemoveActionItem",
+      "entities": []
+    },
+    {
+      "text": "add attendee this is a test of the emergency broadcasting system",
+      "intent": "AddAttendee",
+      "entities": [
+        {
+          "entity": "Attendee",
+          "startPos": 2,
+          "endPos": 10
+        }
+      ]
+    },
+    {
+      "text": "add attendee anthony william dials",
+      "intent": "AddAttendee",
+      "entities": [
+        {
+          "entity": "Attendee",
+          "startPos": 2,
+          "endPos": 4
+        }
+      ]
+    },
+    {
+      "text": "remove attendee tony 2",
+      "intent": "RemoveAttendee",
+      "entities": [
+        {
+          "entity": "Attendee",
+          "startPos": 2,
+          "endPos": 3
+        }
+      ]
+    },
+    {
+      "text": "add attendee shawn adams",
+      "intent": "AddAttendee",
+      "entities": [
+        {
+          "entity": "Attendee",
+          "startPos": 2,
+          "endPos": 3
+        }
+      ]
+    },
+    {
+      "text": "remove #8",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "list action item",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "add action tony to send demo",
+      "intent": "AddActionItem",
+      "entities": [
+        {
+          "entity": "ActionItemTitle",
+          "startPos": 2,
+          "endPos": 5
+        }
+      ]
+    },
+    {
+      "text": "reset",
+      "intent": "StartMeeting",
+      "entities": []
+    },
+    {
+      "text": "list ation items",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "add action item tony td",
+      "intent": "AddActionItem",
+      "entities": [
+        {
+          "entity": "ActionItemTitle",
+          "startPos": 3,
+          "endPos": 4
+        }
+      ]
+    },
+    {
+      "text": "add action item tony #2",
+      "intent": "AddActionItem",
+      "entities": [
+        {
+          "entity": "ActionItemTitle",
+          "startPos": 3,
+          "endPos": 5
+        }
+      ]
+    },
+    {
+      "text": "list minutes",
+      "intent": "ListMinutes",
+      "entities": []
+    },
+    {
+      "text": "remove minute 1",
+      "intent": "RemoveMinute",
+      "entities": []
+    },
+    {
+      "text": "list meeting minutes",
+      "intent": "ListMinutes",
+      "entities": []
+    },
+    {
+      "text": "what are the meeting minutes so far",
+      "intent": "ListMinutes",
+      "entities": []
+    },
+    {
+      "text": "show me the minutes",
+      "intent": "ListMinutes",
+      "entities": []
+    },
+    {
+      "text": "add minute fun stuff",
+      "intent": "AddMinute",
+      "entities": [
+        {
+          "entity": "MinuteTitle",
+          "startPos": 2,
+          "endPos": 3
+        }
+      ]
+    },
+    {
+      "text": "add meeting minute woowoo, that is the best",
+      "intent": "AddMinute",
+      "entities": [
+        {
+          "entity": "MinuteTitle",
+          "startPos": 3,
+          "endPos": 8
+        }
+      ]
+    },
+    {
+      "text": "add attendee tonye",
+      "intent": "AddAttendee",
+      "entities": [
+        {
+          "entity": "Attendee",
+          "startPos": 2,
+          "endPos": 2
+        }
+      ]
+    },
+    {
+      "text": "add attendee steven mayes",
+      "intent": "AddAttendee",
+      "entities": [
+        {
+          "entity": "Attendee",
+          "startPos": 2,
+          "endPos": 3
+        }
+      ]
+    },
+    {
+      "text": "remove minute",
+      "intent": "RemoveMinute",
+      "entities": []
+    },
+    {
+      "text": "add minute shawn should go home",
+      "intent": "AddMinute",
+      "entities": [
+        {
+          "entity": "MinuteTitle",
+          "startPos": 2,
+          "endPos": 5
+        }
+      ]
+    },
+    {
+      "text": "add attendee tony 7",
+      "intent": "AddAttendee",
+      "entities": [
+        {
+          "entity": "Attendee",
+          "startPos": 2,
+          "endPos": 3
+        }
+      ]
+    },
+    {
+      "text": "add attendee tester",
+      "intent": "AddAttendee",
+      "entities": [
+        {
+          "entity": "Attendee",
+          "startPos": 2,
+          "endPos": 2
+        }
+      ]
+    },
+    {
+      "text": "add minute tony to do task 3",
+      "intent": "AddMinute",
+      "entities": [
+        {
+          "entity": "MinuteTitle",
+          "startPos": 2,
+          "endPos": 6
+        }
+      ]
+    },
+    {
+      "text": "add attendee yoyo",
+      "intent": "AddAttendee",
+      "entities": [
+        {
+          "entity": "Attendee",
+          "startPos": 2,
+          "endPos": 2
+        }
+      ]
+    },
+    {
+      "text": "sumarize meeting",
+      "intent": "SummarizeMeeting",
+      "entities": []
+    },
+    {
+      "text": "add minute test bot framework",
+      "intent": "AddMinute",
+      "entities": [
+        {
+          "entity": "MinuteTitle",
+          "startPos": 2,
+          "endPos": 4
+        }
+      ]
+    },
+    {
+      "text": "add action item tony 2",
+      "intent": "AddActionItem",
+      "entities": [
+        {
+          "entity": "ActionItemTitle",
+          "startPos": 3,
+          "endPos": 4
+        }
+      ]
+    },
+    {
+      "text": "add attendee hehe",
+      "intent": "AddAttendee",
+      "entities": [
+        {
+          "entity": "Attendee",
+          "startPos": 2,
+          "endPos": 2
+        }
+      ]
+    },
+    {
+      "text": "add action item tony to email results to team",
+      "intent": "AddActionItem",
+      "entities": [
+        {
+          "entity": "ActionItemTitle",
+          "startPos": 3,
+          "endPos": 8
+        }
+      ]
+    },
+    {
+      "text": "add action have fun 2",
+      "intent": "AddActionItem",
+      "entities": [
+        {
+          "entity": "ActionItemTitle",
+          "startPos": 2,
+          "endPos": 4
+        }
+      ]
+    },
+    {
+      "text": "add minute woowoo, test 3",
+      "intent": "AddMinute",
+      "entities": [
+        {
+          "entity": "MinuteTitle",
+          "startPos": 2,
+          "endPos": 5
+        }
+      ]
+    },
+    {
+      "text": "add action item tony to finish coding",
+      "intent": "AddActionItem",
+      "entities": [
+        {
+          "entity": "ActionItemTitle",
+          "startPos": 3,
+          "endPos": 6
+        }
+      ]
+    },
+    {
+      "text": "add minute shawn - you turn",
+      "intent": "AddMinute",
+      "entities": [
+        {
+          "entity": "MinuteTitle",
+          "startPos": 2,
+          "endPos": 5
+        }
+      ]
+    },
+    {
+      "text": "add minute tony says this is great",
+      "intent": "AddMinute",
+      "entities": [
+        {
+          "entity": "MinuteTitle",
+          "startPos": 2,
+          "endPos": 6
+        }
+      ]
+    },
+    {
+      "text": "add action item woowoo, test 2",
+      "intent": "AddActionItem",
+      "entities": [
+        {
+          "entity": "ActionItemTitle",
+          "startPos": 3,
+          "endPos": 6
+        }
+      ]
+    },
+    {
+      "text": "remove attendee mayess1",
+      "intent": "RemoveAttendee",
+      "entities": [
+        {
+          "entity": "Attendee",
+          "startPos": 2,
+          "endPos": 2
+        }
+      ]
+    },
+    {
+      "text": "add minute tony to do task 1",
+      "intent": "AddMinute",
+      "entities": [
+        {
+          "entity": "MinuteTitle",
+          "startPos": 2,
+          "endPos": 6
+        }
+      ]
+    },
+    {
+      "text": "add action item tony to send email",
+      "intent": "AddActionItem",
+      "entities": [
+        {
+          "entity": "ActionItemTitle",
+          "startPos": 3,
+          "endPos": 6
+        }
+      ]
+    },
+    {
+      "text": "add action item tony to complete ai test",
+      "intent": "AddActionItem",
+      "entities": [
+        {
+          "entity": "ActionItemTitle",
+          "startPos": 3,
+          "endPos": 7
+        }
+      ]
+    },
+    {
+      "text": "add action item tony to deploy the app",
+      "intent": "AddActionItem",
+      "entities": [
+        {
+          "entity": "ActionItemTitle",
+          "startPos": 3,
+          "endPos": 7
+        }
+      ]
+    },
+    {
+      "text": "add minute tony to do task 2",
+      "intent": "AddMinute",
+      "entities": [
+        {
+          "entity": "MinuteTitle",
+          "startPos": 2,
+          "endPos": 6
+        }
+      ]
+    },
+    {
+      "text": "add minute tony to do task 4",
+      "intent": "AddMinute",
+      "entities": [
+        {
+          "entity": "MinuteTitle",
+          "startPos": 2,
+          "endPos": 6
+        }
+      ]
+    },
+    {
+      "text": "add minute this is great",
+      "intent": "AddMinute",
+      "entities": [
+        {
+          "entity": "MinuteTitle",
+          "startPos": 2,
+          "endPos": 4
+        }
+      ]
+    },
+    {
+      "text": "add action item have fun",
+      "intent": "AddActionItem",
+      "entities": [
+        {
+          "entity": "ActionItemTitle",
+          "startPos": 3,
+          "endPos": 4
+        }
+      ]
+    },
+    {
+      "text": "start meeting this is the title",
+      "intent": "StartMeeting",
+      "entities": [
+        {
+          "entity": "MeetingTitle",
+          "startPos": 2,
+          "endPos": 5
+        }
+      ]
+    },
+    {
+      "text": "add action item i wonder if this will work",
+      "intent": "AddActionItem",
+      "entities": [
+        {
+          "entity": "ActionItemTitle",
+          "startPos": 3,
+          "endPos": 8
+        }
+      ]
+    },
+    {
+      "text": "add ai this should work now",
+      "intent": "AddActionItem",
+      "entities": [
+        {
+          "entity": "ActionItemTitle",
+          "startPos": 2,
+          "endPos": 5
+        }
+      ]
+    },
+    {
+      "text": "add action item",
+      "intent": "AddActionItem",
+      "entities": []
+    },
+    {
+      "text": "add ai",
+      "intent": "AddActionItem",
+      "entities": []
+    },
+    {
+      "text": "remove tony 5",
+      "intent": "RemoveAttendee",
+      "entities": []
+    },
+    {
+      "text": "start meeting test meeting title",
+      "intent": "StartMeeting",
+      "entities": [
+        {
+          "entity": "MeetingTitle",
+          "startPos": 2,
+          "endPos": 4
+        }
+      ]
+    },
+    {
+      "text": "who is barack obama",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "tony to do lots is an action item",
+      "intent": "AddActionItem",
+      "entities": [
+        {
+          "entity": "ActionItemTitle",
+          "startPos": 0,
+          "endPos": 3
+        }
+      ]
+    },
+    {
+      "text": "add minute tony will get this done",
+      "intent": "AddMinute",
+      "entities": [
+        {
+          "entity": "MinuteTitle",
+          "startPos": 2,
+          "endPos": 6
+        }
+      ]
+    },
+    {
+      "text": "add minute tony will blow out candles",
+      "intent": "AddMinute",
+      "entities": [
+        {
+          "entity": "MinuteTitle",
+          "startPos": 2,
+          "endPos": 6
+        }
+      ]
+    },
+    {
+      "text": "minute \"tony did it all\"",
+      "intent": "AddMinute",
+      "entities": [
+        {
+          "entity": "MinuteTitle",
+          "startPos": 2,
+          "endPos": 5
+        }
+      ]
+    },
+    {
+      "text": "minute: tony did everything",
+      "intent": "AddMinute",
+      "entities": [
+        {
+          "entity": "MinuteTitle",
+          "startPos": 2,
+          "endPos": 4
+        }
+      ]
+    },
+    {
+      "text": "start meeting tony's first meeting",
+      "intent": "StartMeeting",
+      "entities": [
+        {
+          "entity": "MeetingTitle",
+          "startPos": 2,
+          "endPos": 6
+        }
+      ]
+    },
+    {
+      "text": "add action item tony to make this work",
+      "intent": "AddActionItem",
+      "entities": [
+        {
+          "entity": "ActionItemTitle",
+          "startPos": 3,
+          "endPos": 7
+        }
+      ]
+    },
+    {
+      "text": "add another action item shawn to do more work",
+      "intent": "AddActionItem",
+      "entities": [
+        {
+          "entity": "ActionItemTitle",
+          "startPos": 4,
+          "endPos": 8
+        }
+      ]
+    },
+    {
+      "text": "hi bot",
+      "intent": "Help",
+      "entities": []
+    },
+    {
+      "text": "start meeting test 23",
+      "intent": "StartMeeting",
+      "entities": [
+        {
+          "entity": "MeetingTitle",
+          "startPos": 2,
+          "endPos": 3
+        }
+      ]
+    },
+    {
+      "text": "add meeting minute",
+      "intent": "AddMinute",
+      "entities": []
+    },
+    {
+      "text": "add attendee neat",
+      "intent": "AddAttendee",
+      "entities": [
+        {
+          "entity": "Attendee",
+          "startPos": 2,
+          "endPos": 2
+        }
+      ]
+    },
+    {
+      "text": "start meeting title 1",
+      "intent": "StartMeeting",
+      "entities": [
+        {
+          "entity": "MeetingTitle",
+          "startPos": 2,
+          "endPos": 3
+        }
+      ]
+    },
+    {
+      "text": "hmmm, add action item for tony to do work",
+      "intent": "AddActionItem",
+      "entities": [
+        {
+          "entity": "ActionItemTitle",
+          "startPos": 6,
+          "endPos": 9
+        }
+      ]
+    },
+    {
+      "text": "add attendee tony 5",
+      "intent": "AddAttendee",
+      "entities": [
+        {
+          "entity": "Attendee",
+          "startPos": 2,
+          "endPos": 3
+        }
+      ]
+    },
+    {
+      "text": "add attendee tony1",
+      "intent": "AddAttendee",
+      "entities": [
+        {
+          "entity": "Attendee",
+          "startPos": 2,
+          "endPos": 2
+        }
+      ]
+    },
+    {
+      "text": "dispaly agenda",
+      "intent": "SummarizeMeeting",
+      "entities": []
+    },
+    {
+      "text": "add attendee test1",
+      "intent": "AddAttendee",
+      "entities": [
+        {
+          "entity": "Attendee",
+          "startPos": 2,
+          "endPos": 2
+        }
+      ]
+    },
+    {
+      "text": "add attendee tony 2",
+      "intent": "AddAttendee",
+      "entities": [
+        {
+          "entity": "Attendee",
+          "startPos": 2,
+          "endPos": 3
+        }
+      ]
+    },
+    {
+      "text": "add attendee tony3",
+      "intent": "AddAttendee",
+      "entities": [
+        {
+          "entity": "Attendee",
+          "startPos": 2,
+          "endPos": 2
+        }
+      ]
+    },
+    {
+      "text": "add attendee test2",
+      "intent": "AddAttendee",
+      "entities": [
+        {
+          "entity": "Attendee",
+          "startPos": 2,
+          "endPos": 2
+        }
+      ]
+    },
+    {
+      "text": "add attendee tony 9",
+      "intent": "AddAttendee",
+      "entities": [
+        {
+          "entity": "Attendee",
+          "startPos": 2,
+          "endPos": 3
+        }
+      ]
+    },
+    {
+      "text": "add attendee tony 3",
+      "intent": "AddAttendee",
+      "entities": [
+        {
+          "entity": "Attendee",
+          "startPos": 2,
+          "endPos": 3
+        }
+      ]
+    },
+    {
+      "text": "display agenda",
+      "intent": "SummarizeMeeting",
+      "entities": []
+    },
+    {
+      "text": "add attendee tony 6",
+      "intent": "AddAttendee",
+      "entities": [
+        {
+          "entity": "Attendee",
+          "startPos": 2,
+          "endPos": 3
+        }
+      ]
+    },
+    {
+      "text": "remove ai",
+      "intent": "RemoveActionItem",
+      "entities": []
+    },
+    {
+      "text": "add attendee white wizar",
+      "intent": "AddAttendee",
+      "entities": [
+        {
+          "entity": "Attendee",
+          "startPos": 2,
+          "endPos": 3
+        }
+      ]
+    },
+    {
+      "text": "start meet",
+      "intent": "StartMeeting",
+      "entities": []
+    },
+    {
+      "text": "start meeting tony!",
+      "intent": "StartMeeting",
+      "entities": [
+        {
+          "entity": "MeetingTitle",
+          "startPos": 2,
+          "endPos": 3
+        }
+      ]
+    },
+    {
+      "text": "begin meeting",
+      "intent": "StartMeeting",
+      "entities": []
+    },
+    {
+      "text": "test",
+      "intent": "test",
+      "entities": []
+    },
+    {
+      "text": "add attendee djunaec2",
+      "intent": "AddAttendee",
+      "entities": [
+        {
+          "entity": "Attendee",
+          "startPos": 2,
+          "endPos": 2
+        }
+      ]
+    },
+    {
+      "text": "hey bot, add action item",
+      "intent": "AddActionItem",
+      "entities": []
+    },
+    {
+      "text": "add minute test minute 12",
+      "intent": "AddMinute",
+      "entities": [
+        {
+          "entity": "MinuteTitle",
+          "startPos": 2,
+          "endPos": 4
+        }
+      ]
+    },
+    {
+      "text": "close session",
+      "intent": "CloseMeeting",
+      "entities": []
+    },
+    {
+      "text": "add ai hehe",
+      "intent": "AddActionItem",
+      "entities": [
+        {
+          "entity": "ActionItemTitle",
+          "startPos": 2,
+          "endPos": 2
+        }
+      ]
+    },
+    {
+      "text": "hey hey",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "add attendee mayess1",
+      "intent": "AddAttendee",
+      "entities": [
+        {
+          "entity": "Attendee",
+          "startPos": 2,
+          "endPos": 2
+        }
+      ]
+    },
+    {
+      "text": "help me dude",
+      "intent": "Help",
+      "entities": []
+    },
+    {
+      "text": "hi",
+      "intent": "Help",
+      "entities": []
+    },
+    {
+      "text": "there is an action item to create",
+      "intent": "AddActionItem",
+      "entities": []
+    },
+    {
+      "text": "new action item",
+      "intent": "AddActionItem",
+      "entities": []
+    },
+    {
+      "text": "hi bot, help!!",
+      "intent": "Help",
+      "entities": [
+        {
+          "entity": "HelpItem",
+          "startPos": 4,
+          "endPos": 4
+        }
+      ]
+    },
+    {
+      "text": "list ai",
+      "intent": "ListActionItems",
+      "entities": []
+    },
+    {
+      "text": "list actions",
+      "intent": "ListActionItems",
+      "entities": []
+    },
+    {
+      "text": "list ais",
+      "intent": "ListActionItems",
+      "entities": []
+    },
+    {
+      "text": "list items",
+      "intent": "ListActionItems",
+      "entities": []
+    }
+  ]
+}

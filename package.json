@@ -1,0 +1,21 @@
+{
+  "name": "nwuniversalbot2",
+  "version": "1.0.0",
+  "description": "NW Universal Bot",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Universal",
+    "Bot"
+  ],
+  "author": "Anthony Dials",
+  "license": "ISC",
+  "dependencies": {
+    "botbuilder": "^3.0.0",
+    "botbuilder-calling": "^3.0.0",
+    "restify": "^4.1.1",
+    "sendgrid": "^2.0.0"
+  }
+}
